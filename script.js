@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     yesBtn.addEventListener('click', () => {
         // Ocultar botones y mostrar respuesta
         interactiveSection.style.display = 'none';
+        
+        // Asegurarnos de eliminar el botón 'No' por si está fuera de la tarjeta
+        if (noBtn) {
+            noBtn.remove();
+        }
+
         surpriseMessage.style.display = 'block';
         surpriseMessage.classList.add('pop-in');
         
